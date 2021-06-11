@@ -73,6 +73,8 @@ function resolver() {
 }
 
 sum.addEventListener("click", () => {
+  btnDisabled();
+  sum.classList.add("symbol-active");
   a = screen.textContent;
   console.log(screen.textContent);
   operacion = "+";
@@ -80,25 +82,29 @@ sum.addEventListener("click", () => {
 });
 
 porcentage.addEventListener("click", () => {
-  // handleScreen("%");
+  btnDisabled();
+  porcentage.classList.add("symbol-active");
   a = screen.textContent;
   operacion = "%";
   limpiar();
 });
 subtraction.addEventListener("click", () => {
-  // handleScreen("-");
+  btnDisabled();
+  subtraction.classList.add("symbol-active");
   a = screen.textContent;
   operacion = "-";
   limpiar();
 });
 divide.addEventListener("click", () => {
-  // handleScreen("/");
+  btnDisabled();
+  divide.classList.add("symbol-active");
   a = screen.textContent;
   operacion = "/";
   limpiar();
 });
 multiply.addEventListener("click", () => {
-  // handleScreen("*");
+  btnDisabled();
+  multiply.classList.add("symbol-active");
   a = screen.textContent;
   operacion = "*";
   limpiar();
@@ -106,9 +112,17 @@ multiply.addEventListener("click", () => {
 
 resultado.addEventListener("click", () => {
   b = screen.textContent;
-  console.log(b);
+  btnDisabled();
   resolver();
 });
+
+function btnDisabled() {
+  multiply.classList.remove("symbol-active");
+  divide.classList.remove("symbol-active");
+  subtraction.classList.remove("symbol-active");
+  porcentage.classList.remove("symbol-active");
+  sum.classList.remove("symbol-active");
+}
 
 number0.addEventListener("click", () => {
   handleScreen(0);

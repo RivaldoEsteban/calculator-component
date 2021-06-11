@@ -103,6 +103,11 @@ p {
   background: #e7e9ec;
 }
 
+.symbol-active {
+  border: 1px solid blue;
+  box-shadow: 0 0 10px blue !important;
+}
+
 button {
   border: none;
   background: none;
